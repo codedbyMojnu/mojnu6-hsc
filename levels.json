@@ -1,0 +1,226 @@
+[
+  {
+    "question": "What HTTP method is used to create a new resource in RESTful APIs?",
+    "options": ["GET", "POST", "PUT", "DELETE"],
+    "hint": "Think about the action of creating something new. This method is often used when submitting forms.",
+    "answer": "POST",
+    "explanation": "POST is the HTTP method used to create new resources. It's commonly used when submitting form data or creating new records in a database. GET is for retrieving data, PUT is for updating existing resources, and DELETE is for removing resources."
+  },
+  {
+    "question": "What is the correct way to update a user's email address using a REST API?",
+    "options": ["GET /users/123", "POST /users/123", "PUT /users/123", "DELETE /users/123"],
+    "hint": "You're modifying an existing resource, not creating a new one. Look for the method that handles updates.",
+    "answer": "PUT /users/123",
+    "explanation": "PUT is used to update existing resources. The URL includes the user ID (123) to identify which specific user to update. POST would create a new user, GET would retrieve user data, and DELETE would remove the user."
+  },
+  {
+    "question": "What does the 'P' in PATCH method stand for?",
+    "options": ["Post", "Partial", "Put", "Process"],
+    "hint": "PATCH is used for making partial modifications to a resource, not complete replacements.",
+    "answer": "Partial",
+    "explanation": "PATCH stands for 'Partial' because it's used to make partial modifications to a resource. Unlike PUT which replaces the entire resource, PATCH allows you to update only specific fields or properties of an existing resource."
+  },
+  {
+    "question": "What is the main difference between PUT and PATCH HTTP methods?",
+    "options": ["PUT is faster than PATCH", "PUT replaces entire resource, PATCH updates partially", "PATCH is more secure than PUT", "PUT is deprecated, PATCH is modern"],
+    "hint": "Think about what each method does to the existing data. One replaces everything, the other modifies only parts.",
+    "answer": "PUT replaces entire resource, PATCH updates partially",
+    "explanation": "PUT replaces the entire resource with the new data provided, while PATCH makes partial modifications to specific fields of the existing resource. PUT requires sending the complete resource, while PATCH only needs the fields to be updated."
+  },
+  {
+    "question": "What HTTP status code indicates a successful creation of a new resource?",
+    "options": ["200 OK", "201 Created", "204 No Content", "202 Accepted"],
+    "hint": "This status code specifically indicates that a new resource was successfully created, not just a general success.",
+    "answer": "201 Created",
+    "explanation": "HTTP status code 201 (Created) is returned when a new resource has been successfully created. 200 indicates general success, 204 means success but no content to return, and 202 means the request was accepted but processing is not complete."
+  },
+  {
+    "question": "What is the purpose of the OPTIONS HTTP method?",
+    "options": ["To get server information", "To check what methods are allowed", "To authenticate users", "To compress data"],
+    "hint": "This method is often used in CORS (Cross-Origin Resource Sharing) to check what operations are permitted.",
+    "answer": "To check what methods are allowed",
+    "explanation": "The OPTIONS method is used to check what HTTP methods are allowed on a resource. It's commonly used in CORS preflight requests to determine if the actual request will be permitted by the server."
+  },
+  {
+    "question": "What does REST stand for in RESTful APIs?",
+    "options": ["Remote Execution System Transfer", "Representational State Transfer", "Resource Exchange Service Technology", "Request Endpoint Service Transfer"],
+    "hint": "Think about how REST APIs represent resources and their states.",
+    "answer": "Representational State Transfer",
+    "explanation": "REST stands for 'Representational State Transfer'. It's an architectural style for designing networked applications where resources are represented as URLs and can be manipulated using standard HTTP methods."
+  },
+  {
+    "question": "What is the correct HTTP status code for 'Not Found'?",
+    "options": ["400", "401", "404", "500"],
+    "hint": "This is one of the most common HTTP error codes that users encounter when a page or resource doesn't exist.",
+    "answer": "404",
+    "explanation": "HTTP status code 404 (Not Found) indicates that the requested resource could not be found on the server. 400 is Bad Request, 401 is Unauthorized, and 500 is Internal Server Error."
+  },
+  {
+    "question": "What is the purpose of HTTP headers in API requests?",
+    "options": ["To store data", "To provide metadata about the request", "To encrypt the response", "To compress the data"],
+    "hint": "Headers provide additional information about the request or response, not the actual data itself.",
+    "answer": "To provide metadata about the request",
+    "explanation": "HTTP headers provide metadata about the request or response, such as content type, authentication tokens, caching directives, and other contextual information. They don't contain the actual data payload."
+  },
+  {
+    "question": "What is the difference between GET and POST requests?",
+    "options": ["GET is faster than POST", "GET sends data in URL, POST sends in body", "POST is more secure than GET", "GET is deprecated, POST is modern"],
+    "hint": "Think about where the data is sent in each method. One puts it in the URL, the other in the request body.",
+    "answer": "GET sends data in URL, POST sends in body",
+    "explanation": "GET requests send data as query parameters in the URL, while POST requests send data in the request body. This makes POST more suitable for sensitive data and larger amounts of data, while GET is better for simple data retrieval."
+  },
+  {
+    "question": "What HTTP method should you use to delete a resource?",
+    "options": [],
+    "hint": "This method is specifically designed for removing resources from the server.",
+    "answer": "DELETE",
+    "explanation": "The DELETE HTTP method is specifically designed for removing resources from the server. It's the standard way to delete data in RESTful APIs and clearly indicates the intent to remove a resource."
+  },
+  {
+    "question": "What is the purpose of the Authorization header?",
+    "options": [],
+    "hint": "This header is used to provide credentials or tokens to authenticate the request.",
+    "answer": "Authentication",
+    "explanation": "The Authorization header is used to provide authentication credentials or tokens to the server. It allows the server to verify the identity of the client making the request and determine what permissions they have."
+  },
+  {
+    "question": "What does the 'C' in CRUD operations stand for?",
+    "options": ["Create", "Copy", "Check", "Change"],
+    "hint": "CRUD represents the four basic operations you can perform on data in a database or API.",
+    "answer": "Create",
+    "explanation": "In CRUD operations, 'C' stands for 'Create'. CRUD represents Create, Read, Update, and Delete - the four basic operations for managing data. Create is typically handled by POST requests in REST APIs."
+  },
+  {
+    "question": "What is the purpose of HTTP status codes?",
+    "options": ["To encrypt data", "To compress responses", "To indicate request/response status", "To authenticate users"],
+    "hint": "These codes provide information about whether the request was successful, failed, or needs further action.",
+    "answer": "To indicate request/response status",
+    "explanation": "HTTP status codes provide information about the status of the HTTP request and response. They indicate whether the request was successful, failed, redirected, or requires further action from the client."
+  },
+  {
+    "question": "What is the correct format for a REST API URL?",
+    "options": ["/api/users/123", "/api/getUser?id=123", "/api/user.php?id=123", "/api/users.php?action=get&id=123"],
+    "hint": "RESTful URLs should be resource-oriented and use nouns, not verbs or actions.",
+    "answer": "/api/users/123",
+    "explanation": "RESTful URLs should be resource-oriented and use nouns. '/api/users/123' represents a specific user resource with ID 123. The other options use verbs or actions, which is not RESTful design."
+  },
+  {
+    "question": "What HTTP status code indicates a successful request with no content to return?",
+    "options": [],
+    "hint": "This status code means the request was successful, but there's no data to send back in the response body.",
+    "answer": "204",
+    "explanation": "HTTP status code 204 (No Content) indicates that the request was successful, but there is no content to return in the response body. This is commonly used for DELETE operations or when a resource was successfully processed but no data needs to be returned."
+  },
+  {
+    "question": "What is the purpose of the Content-Type header?",
+    "options": ["To specify the data format", "To encrypt the data", "To compress the response", "To authenticate the request"],
+    "hint": "This header tells the server or client what format the data is in, such as JSON, XML, or form data.",
+    "answer": "To specify the data format",
+    "explanation": "The Content-Type header specifies the format of the data being sent in the request or response body. Common values include 'application/json' for JSON data, 'application/xml' for XML data, and 'application/x-www-form-urlencoded' for form data."
+  },
+  {
+    "question": "What is the difference between 401 and 403 HTTP status codes?",
+    "options": ["401 is for missing credentials, 403 is for insufficient permissions", "401 is for server errors, 403 is for client errors", "401 is for timeouts, 403 is for rate limits", "401 is for invalid data, 403 is for invalid URL"],
+    "hint": "Think about authentication vs authorization. One is about proving identity, the other is about having the right permissions.",
+    "answer": "401 is for missing credentials, 403 is for insufficient permissions",
+    "explanation": "401 (Unauthorized) means the client needs to provide authentication credentials. 403 (Forbidden) means the client is authenticated but doesn't have sufficient permissions to access the resource. 401 is about authentication, 403 is about authorization."
+  },
+  {
+    "question": "What is the purpose of the Accept header in HTTP requests?",
+    "options": [],
+    "hint": "This header tells the server what type of response format the client prefers to receive.",
+    "answer": "Response format preference",
+    "explanation": "The Accept header tells the server what type of response format the client prefers to receive. For example, 'Accept: application/json' indicates the client wants JSON data, while 'Accept: text/html' indicates the client wants HTML content."
+  },
+  {
+    "question": "What HTTP method is idempotent?",
+    "options": ["POST", "PUT", "PATCH", "DELETE"],
+    "hint": "An idempotent method can be called multiple times with the same result. Think about which method safely replaces a resource completely.",
+    "answer": "PUT",
+    "explanation": "PUT is idempotent because calling it multiple times with the same data will have the same effect as calling it once. It completely replaces the resource, so multiple identical PUT requests will result in the same state. POST and PATCH are not idempotent because they can have different effects when called multiple times."
+  },
+  {
+    "question": "What is the purpose of the User-Agent header?",
+    "options": ["To identify the client", "To authenticate the user", "To specify the content type", "To set caching rules"],
+    "hint": "This header provides information about the client making the request, such as the browser or application name.",
+    "answer": "To identify the client",
+    "explanation": "The User-Agent header identifies the client making the request, such as the browser name and version, mobile app, or API client. This helps servers provide appropriate responses and track usage statistics."
+  },
+  {
+    "question": "What does the 'U' in CRUD operations stand for?",
+    "options": [],
+    "hint": "This operation modifies existing data without creating new records.",
+    "answer": "Update",
+    "explanation": "In CRUD operations, 'U' stands for 'Update'. This operation modifies existing data in the database. In REST APIs, this is typically handled by PUT or PATCH requests, depending on whether you're replacing the entire resource or making partial modifications."
+  },
+  {
+    "question": "What is the purpose of HTTP caching headers?",
+    "options": ["To encrypt data", "To compress responses", "To control data storage", "To authenticate requests"],
+    "hint": "These headers help control how long data can be stored and reused to improve performance.",
+    "answer": "To control data storage",
+    "explanation": "HTTP caching headers control how long data can be stored and reused by clients and intermediate servers. This improves performance by reducing the need to fetch the same data repeatedly. Common caching headers include Cache-Control, ETag, and Last-Modified."
+  },
+  {
+    "question": "What is the difference between a REST API and a GraphQL API?",
+    "options": ["REST uses HTTP, GraphQL doesn't", "REST has one endpoint, GraphQL has many", "REST over-fetches data, GraphQL is more precise", "REST is faster, GraphQL is slower"],
+    "hint": "Think about how data is fetched. One approach gets all fields, the other lets you specify exactly what you need.",
+    "answer": "REST over-fetches data, GraphQL is more precise",
+    "explanation": "REST APIs often return more data than needed (over-fetching) because endpoints return fixed data structures. GraphQL allows clients to specify exactly what data they need, making it more precise and efficient for data fetching."
+  },
+  {
+    "question": "What HTTP status code indicates a server error?",
+    "options": ["400", "401", "404", "500"],
+    "hint": "This status code range (500-599) indicates that something went wrong on the server side, not with the client request.",
+    "answer": "500",
+    "explanation": "HTTP status code 500 (Internal Server Error) indicates that something went wrong on the server side. The 5xx range is reserved for server errors, while 4xx codes indicate client errors. 400, 401, and 404 are all client error codes."
+  },
+  {
+    "question": "What is the purpose of the ETag header?",
+    "options": [],
+    "hint": "This header provides a unique identifier for a resource that changes when the resource is modified.",
+    "answer": "Resource versioning",
+    "explanation": "The ETag header provides a unique identifier for a resource that changes when the resource is modified. It's used for caching and conditional requests, allowing clients to check if their cached version is still valid without downloading the entire resource again."
+  },
+  {
+    "question": "What does the 'D' in CRUD operations stand for?",
+    "options": ["Data", "Delete", "Destroy", "Drop"],
+    "hint": "This operation removes data from the database permanently.",
+    "answer": "Delete",
+    "explanation": "In CRUD operations, 'D' stands for 'Delete'. This operation removes data from the database permanently. In REST APIs, this is typically handled by DELETE requests to remove specific resources."
+  },
+  {
+    "question": "What is the purpose of the Location header in HTTP responses?",
+    "options": ["To specify the server location", "To redirect the client", "To identify the resource", "To set caching rules"],
+    "hint": "This header is commonly used with 201 (Created) responses to indicate where the newly created resource can be found.",
+    "answer": "To identify the resource",
+    "explanation": "The Location header identifies the URI of a resource, often used with 201 (Created) responses to indicate where the newly created resource can be found. It can also be used with 3xx redirect responses to specify the new location."
+  },
+  {
+    "question": "What is the difference between PUT and POST for creating resources?",
+    "options": ["PUT is faster than POST", "PUT requires an ID, POST doesn't", "POST is more secure than PUT", "PUT is deprecated, POST is modern"],
+    "hint": "Think about who determines the resource identifier. One method lets the client specify the ID, the other lets the server generate it.",
+    "answer": "PUT requires an ID, POST doesn't",
+    "explanation": "PUT requires the client to specify the resource ID in the URL, while POST lets the server generate the ID. PUT is idempotent (safe to call multiple times), while POST is not. POST is more commonly used for creating resources when the client doesn't know the ID beforehand."
+  },
+  {
+    "question": "What HTTP status code indicates a successful request?",
+    "options": [],
+    "hint": "This is the most common success status code, indicating that the request was processed successfully.",
+    "answer": "200",
+    "explanation": "HTTP status code 200 (OK) indicates that the request was processed successfully. It's the most common success status code and means the server successfully fulfilled the request and returned the expected response."
+  },
+  {
+    "question": "What is the purpose of the If-Modified-Since header?",
+    "options": ["To set a deadline", "To check for updates", "To authenticate the request", "To specify content type"],
+    "hint": "This header is used in conditional requests to check if a resource has been modified since a specific date.",
+    "answer": "To check for updates",
+    "explanation": "The If-Modified-Since header is used in conditional requests to check if a resource has been modified since a specific date. If the resource hasn't changed, the server returns 304 (Not Modified) instead of the full response, saving bandwidth."
+  },
+  {
+    "question": "What is the purpose of the 'R' in CRUD operations?",
+    "options": [],
+    "hint": "This operation retrieves data from the database without modifying it.",
+    "answer": "Read",
+    "explanation": "In CRUD operations, 'R' stands for 'Read'. This operation retrieves data from the database without modifying it. In REST APIs, this is typically handled by GET requests to fetch resources."
+  }
+] 

@@ -1,0 +1,11 @@
+<div className="flex justify-between items-center mb-4">
+    <button className="p-2 rounded-full hover:bg-gray-100 transition" onClick={()=> setSoundON((s) => !s)}
+        >
+        {soundOn ?
+        <SoundOn /> :
+        <SoundOff />}
+    </button>
+    <Link to="/dashboard" className="text-sm text-blue-500 hover:underline font-medium">
+    Admin Login
+    </Link>
+</div>
