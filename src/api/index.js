@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://mojnu6-hsc.onrender.com", // Update with your backend URL
+  baseURL: "http://mojnu6-hsc.onrender.com", // Update with your backend URL
 });
 
 // Leaderboard API functions

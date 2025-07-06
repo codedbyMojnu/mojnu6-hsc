@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import api from "../api";
 import { useAuth } from "../context/AuthContext";
 import { useProfile } from "../context/ProfileContext";
 import Achievements from "./Achievements";
@@ -8,8 +7,6 @@ import LoginModal from "./auth/LoginModal";
 import SignupModal from "./auth/SignupModal";
 import DailyStreak from "./DailyStreak";
 import Leaderboard from "./Leaderboard";
-import MarkdownRenderer from "./MarkdownRenderer";
-import RequestHintPointsModal from "./RequestHintPointsModal";
 import Rewards from "./Rewards";
 import SettingsModal from "./SettingsModal";
 import SurveyModal from "./SurveyModal";
@@ -279,7 +276,7 @@ export default function Header({
                 <path d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            {user?.token && (
+            {/* {user?.token && (
               <button
                 onClick={handleWrongAnswersClick}
                 className="flex items-center gap-2 px-3 py-2 rounded-md bg-red-100 hover:bg-red-200 text-red-700 font-bold transition-all duration-200 text-sm md:mr-3 lg:mr-3"
@@ -291,7 +288,7 @@ export default function Header({
                   {profile?.wrongAnswers?.length || 0}
                 </span>
               </button>
-            )}
+            )} */}
           </div>
 
           {/* Desktop Profile/Login and Zenith Menu */}
@@ -538,7 +535,7 @@ export default function Header({
       )}
 
       {/* Wrong Answers Modal */}
-      {showWrongAnswers && (
+      {/* {showWrongAnswers && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
           <div className="bg-white/95 rounded-2xl shadow-2xl p-6 max-w-2xl w-full mx-4 border-4 border-red-300 relative max-h-[80vh] overflow-y-auto">
             <button
@@ -606,15 +603,8 @@ export default function Header({
             )}
           </div>
         </div>
-      )}
+      )} */}
       {/* Request Hint Points Modal */}
-      <RequestHintPointsModal
-        isOpen={showRequestHintForm}
-        onClose={() => setShowRequestHintForm(false)}
-        user={user}
-        profile={profile}
-        setProfile={setProfile}
-      />
     </>
   );
 }
